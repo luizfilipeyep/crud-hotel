@@ -1,0 +1,23 @@
+.AddClientWrapper {
+  padding: 1em;
+
+  h1 {
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: .5em;
+  }
+
+  .inputWrapper {
+    padding: 2px;
+  }
+
+  input, select, button {
+    padding: .5em;
+  }
+
+  select, button {
+    cursor: pointer;
+  }
+}
