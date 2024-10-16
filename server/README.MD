@@ -10,6 +10,7 @@ Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 ##  CRUD CLIENTE
 
 **GET** http://localhost:8800/get/cliente
+
 **POST** http://localhost:8800/add/cliente
 ``` json
 {
@@ -41,6 +42,7 @@ Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 ## CRUD RESERVA
 
 **GET** http://localhost:8800/get/reserva
+
 **POST** http://localhost:8800/add/reserva
 ``` json
 {
