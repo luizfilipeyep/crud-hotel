@@ -1,9 +1,11 @@
 # API HOTEL
 
-Para começar vamos executar o comando `npm install` para instalar todos os módulos e dependências utilizados no node.
+Para começar vamos executar o comando `npm install` para instalar todos os módulos e dependências utilizados no node
 
-Agora configuramos a conexão com o banco de dados no arquivo `index.js`.
+Agora configuramos a conexão com o banco de dados no arquivo `index.js`
 *Você pode utilizar o dump com um banco já pronto no arquivo hotel.sql*
+
+Agora inicie o servidor com o comando `npm run server` no terminal
 
 Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 
@@ -18,7 +20,7 @@ Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 	"age": 52,
 	"uf": "AL"
 }
-``` 
+```
 
 **PUT** http://localhost:8800/edit/cliente
 ``` json

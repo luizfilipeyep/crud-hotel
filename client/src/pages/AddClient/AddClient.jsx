@@ -52,9 +52,21 @@ function AddClient() {
               <a href="#">Cancelar</a> | <button type="submit">Salvar</button>
             </div>
           </Form>
-          
-                   
         </Formik>
+        <table>
+          <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>UF</th>
+          </tr>
+
+          <tr>
+            <td>Luiz</td>
+            <td>20</td>
+            <td>PE</td>
+          </tr>
+        </table>
+        
       </div>
     </>
    );
