@@ -50,8 +50,8 @@ app.put("/edit/cliente", (req, res) => {
   })
 })
 
-app.delete("/delete/cliente", (req, res) => {
-  const cod_cliente = req.body.cod_cliente
+app.delete("/delete/cliente/:cod_cliente", (req, res) => {
+  const cod_cliente = req.params.cod_cliente
 
   let SQL = "DELETE FROM cliente WHERE cod_cliente = ?;"
 

@@ -1,0 +1,22 @@
+.listClientWrapper {
+  padding: 1em;
+
+  h1 {
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: .5em;
+  }
+
+  table {
+    border-collapse: collapse;
+
+    td, th {
+      padding: .1em;
+      text-align: center;
+      border: 1px solid black;
+     
+    }
+  }
+}

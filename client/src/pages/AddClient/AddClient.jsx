@@ -1,8 +1,13 @@
 import axios from "axios"
 import { Formik, Form, Field, ErrorMessage } from "formik"
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+
 import "./addclient.css"
 
 function AddClient() {
+  
+
   const handleClickAddUser = (values) => {
     axios
         .post("http://localhost:8800/add/cliente", {
@@ -36,6 +41,7 @@ function AddClient() {
             <div className="inputWrapper">
               <label htmlFor="uf">UF: </label>
               <Field as="select" name="uf" id="uf">
+                <option value="" selected disabled> Selecione</option>
                 <option value="AL">AL</option>
                 <option value="BA">BA</option>
                 <option value="CE">CE</option>
@@ -49,24 +55,10 @@ function AddClient() {
             </div>
 
             <div className="inputWrapper">
-              <a href="#">Cancelar</a> | <button type="submit">Salvar</button>
+              <Link to="/">Cancelar</Link> | <button type="submit">Salvar</button>
             </div>
           </Form>
-        </Formik>
-        <table>
-          <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>UF</th>
-          </tr>
-
-          <tr>
-            <td>Luiz</td>
-            <td>20</td>
-            <td>PE</td>
-          </tr>
-        </table>
-        
+        </Formik>       
       </div>
     </>
    );
