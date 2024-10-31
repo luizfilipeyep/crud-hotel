@@ -23,6 +23,7 @@ Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 ```
 
 **PUT** http://localhost:8800/edit/cliente
+
 ``` json
 {
 	"cod_cliente": 1,
@@ -32,12 +33,7 @@ Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 }
 ```
 
-**DEL** http://localhost:8800/delete/cliente
-``` json
-{
-	"cod_cliente": 3
-}
-```
+**DEL** http://localhost:8800/delete/cliente/<cod_cliente>
 
 
 
@@ -70,3 +66,11 @@ Agora é só testar a api rest no POSTMAN ou INSOMNIA e ser feliz :)
 	"id_reserva": 3
 }
 ```
+
+
+
+## Versão Web
+
+Para começar vamos executar o comando `npm install` para instalar todos os módulos e dependências utilizados no node
+
+Agora inicie  com o comando `npm run dev` no terminal
