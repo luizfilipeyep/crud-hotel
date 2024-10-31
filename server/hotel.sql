@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16/10/2024 às 23:39
+-- Tempo de geração: 31-Out-2024 às 15:33
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.2.12
+-- versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,12 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+-- Banco de dados: `hotel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cliente`
+-- Estrutura da tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
@@ -34,16 +35,17 @@ CREATE TABLE `cliente` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `cliente`
+-- Extraindo dados da tabela `cliente`
 --
 
 INSERT INTO `cliente` (`cod_cliente`, `name`, `age`, `uf`) VALUES
-(1, 'Luiz Filipe Santos Omena', 20, 'PE');
+(1, 'Luiz', 20, 'PE'),
+(2, 'Emmily', 18, 'PE');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `quarto`
+-- Estrutura da tabela `quarto`
 --
 
 CREATE TABLE `quarto` (
@@ -52,21 +54,10 @@ CREATE TABLE `quarto` (
   `preco_quarto` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `quarto`
---
-
-INSERT INTO `quarto` (`cod_quarto`, `tipo_quarto`, `preco_quarto`) VALUES
-(1, 'Standard', 300),
-(2, 'Deluxe', 600),
-(3, 'Suíte Júnior', 900),
-(4, 'Suíte Master', 1200),
-(5, 'Suíte Presidencial', 4000);
-
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `reserva`
+-- Estrutura da tabela `reserva`
 --
 
 CREATE TABLE `reserva` (
@@ -83,19 +74,19 @@ CREATE TABLE `reserva` (
 --
 
 --
--- Índices de tabela `cliente`
+-- Índices para tabela `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`cod_cliente`);
 
 --
--- Índices de tabela `quarto`
+-- Índices para tabela `quarto`
 --
 ALTER TABLE `quarto`
   ADD PRIMARY KEY (`cod_quarto`);
 
 --
--- Índices de tabela `reserva`
+-- Índices para tabela `reserva`
 --
 ALTER TABLE `reserva`
   ADD PRIMARY KEY (`id_reserva`),
@@ -103,33 +94,33 @@ ALTER TABLE `reserva`
   ADD KEY `idQuarto` (`idQuarto`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `cod_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cod_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `quarto`
 --
 ALTER TABLE `quarto`
-  MODIFY `cod_quarto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `cod_quarto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Restrições para tabelas despejadas
+-- Restrições para despejos de tabelas
 --
 
 --
--- Restrições para tabelas `reserva`
+-- Limitadores para a tabela `reserva`
 --
 ALTER TABLE `reserva`
   ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`idCliente`) REFERENCES `cliente` (`cod_cliente`),
